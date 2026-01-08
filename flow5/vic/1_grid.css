@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container{
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    margin: 15px auto;
+    /* skal man skrive ellers laver den ikke grid  */
+    display: grid;
+    gap: 15px;
+    /* man tegner hvordan man ville have det sat op / og . giver et mellemrum  */
+    grid-template-areas: 
+        "top    top" 
+        "simg   simg"
+        "main1   main2"
+        "main3   main4"
+        "main5   main6"
+        "footer footer";
+    
+}
+.grid-items{
+    background-color: rgb(216, 216, 216);
+    padding: 15px;
+    color: rgb(0, 0, 0);
+    border: solid black;
+    /* em er dubel så stor som nomlat tekst */
+    font-size: small;
+}
+img{
+    width: 100%;
+}
+.logo, .nav{
+    border: solid black;
+    padding: 10px;
+}
+
+/* man giver navne som i dit design */
+.one{
+    grid-area: top;
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.two{
+    grid-area: simg;
+}
+
+.three{
+    grid-area: main1;
+}
+.four{
+    grid-area: main2;
+}
+.five{
+    grid-area: main3;
+}
+.six{
+    grid-area: main4;
+}
+.seven{
+    grid-area: main5;
+}
+.eight{
+    grid-area: main6;
+}
+
+.nine{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 921px){
+
+    .container{
+        grid-template-areas: 
+        "top    top    top" 
+        "simg   simg    simg"
+        "main1  main2   main3"
+        "main4  main5   main6"
+        "footer footer footer";
+    }
+    .one{
+        grid-column: span 3;
+    }
+
+}
+
+@media screen and (min-width: 1021px){
+
+    .container{
+        grid-template-areas: 
+        "top    top    top" 
+        "simg   simg    ."
+        "simg   simg    main1"
+        "main2   main3  main3"
+        " .   main3  main3"
+        "main4  main5   main6"
+        "footer footer footer";
+    }
+    .one{
+        grid-column: span 3;
+    }
+
+    .nav{
+        width: 50%;
+        text-align: center;
+    }
+
+}

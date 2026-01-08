@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: whitesmoke;
+}
+
+.container {
+    padding: 10px;
+    margin: 10px;
+    display: grid;
+    gap: 20px;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-areas: 
+        "top top"
+        "bigimg bigimg"
+        "img1 img2"
+        "img3 img4"
+        "img5 img6"
+        "footer footer"
+    ;
+}
+
+.top {
+    background-color: blueviolet;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    grid-area: top;
+}
+
+.logo, .nav{
+    border: 2px solid whitesmoke;
+    padding: 10px;
+    /* grid-area: top; */
+    font-size: 1.5em;
+}
+
+.img {
+    /* padding: 15px;
+    color: blueviolet;
+    border: solid blueviolet;
+    grid-template-columns: 50% 50%; */
+    width: 100%;
+}
+
+.one {
+    grid-area: bigimg;
+    padding: 15px;
+    color: blueviolet;
+    border: solid blueviolet;
+    /* grid-template-columns: 50% 50%; */
+}
+.two {
+    grid-area: img1;
+    padding: 15px;
+    color: blueviolet;
+    border: solid blueviolet;
+    /* grid-template-columns: 50% 50%; */
+    /* font-size: 0.8em; */
+}
+.three {
+    grid-area: img2;
+    padding: 15px;
+    color: blueviolet;
+    border: solid blueviolet;
+    /* grid-template-columns: 50% 50%; */
+}
+.four {
+    grid-area: img3;
+    padding: 15px;
+    color: blueviolet;
+    border: solid blueviolet;
+    /* grid-template-columns: 50% 50%; */
+}
+.five {
+    grid-area: img4;
+    padding: 15px;
+    color: blueviolet;
+    border: solid blueviolet;
+    /* grid-template-columns: 50% 50%; */
+}
+.six {
+    grid-area: img5;
+    padding: 15px;
+    color: blueviolet;
+    border: solid blueviolet;
+}
+.seven {
+    grid-area: img6;
+    padding: 15px;
+    color: blueviolet;
+    border: solid blueviolet;
+}
+/* .two .three .four .five .six .seven {
+    grid-area: imga;
+} */
+
+
+.footer{
+    background-color: blueviolet;
+    padding: 10px;
+    color: whitesmoke;
+    text-align: center;
+    grid-area: footer;
+    font-size: 1.5em;
+    /* farve/tema* hitter ikke 
+    border: solid orange; */
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        grid-template-areas: 
+        "top top top"
+        "bigimg bigimg bigimg"
+        "img1 img2 img3"
+        "img4 img5 img6"
+        "footer footer footer"
+    }
+}
+
+@media screen and (min-width: 1064px) {
+    .container {
+        grid-template-areas: 
+        "top top top"
+        "bigimg bigimg ."
+        "bigimg bigimg img1"
+        "img2 img3 img3"
+        ". img3 img3"
+        "img4 img5 img6"
+        "footer footer footer";
+    }
+}
+
+
+
+
+
